@@ -38,7 +38,7 @@ class FilmSeeder extends Seeder
 
         $film = new Film();
         $film->name = '3 Idiots';
-        $film->description = 'Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the $film->orldcaled them "idiots".';
+        $film->description = 'Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them "idiots".';
         $film->release_date = new \Carbon\Carbon('2009-12-25');
         $film->rating = array_random(range(1, 5));
         $film->ticket_price = $faker->randomDigitNotNull;
