@@ -61,4 +61,5 @@ NOTES:
 3. Execute `cp .env.example .env`
 4. Modify .env file with Database Connection and add Project's public URL as `API_URL` in env variable
 5. Execute `php artisan migrate --seed`
-6. Execute `npm run dev` or `npm run production`
+6. Execute `npm install` or `yarn install
+7. Execute `npm run dev` or `npm run production`
