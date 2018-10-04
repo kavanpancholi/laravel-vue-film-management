@@ -13,6 +13,12 @@
                     <dd>{{ film.release_date }}</dd>
                     <dt>Rating</dt>
                     <dd>{{ film.rating }}</dd>
+                    <dt v-if="genre">Genre</dt>
+                    <dd v-if="genre">{{ genre }}</dd>
+                    <dt>Country</dt>
+                    <dd>{{ country }}</dd>
+                    <dt>Ticket Price</dt>
+                    <dd>{{ film.ticket_price }}</dd>
                 </dl>
                 <div class="comment-container">
                     <h3 class="text-center">Comments</h3>
@@ -45,6 +51,8 @@
         data() {
             return {
                 film: [],
+                genre: null,
+                country: null,
                 comment: ''
             }
         },
@@ -66,6 +74,12 @@
                 axios.get('/api/film/' + this.$route.params.slug)
                     .then(response => {
                         this.film = response.data.film;
+                        this.country = this.film.country.name;
+                        if(this.film.genres){
+                            this.genre = (this.film.genres).map(item => {
+                                return item.name
+                            }).toString()
+                        }
                     })
             }
         }

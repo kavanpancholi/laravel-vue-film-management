@@ -59,7 +59,7 @@ class FilmController extends Controller
      */
     public function show($slug)
     {
-        $film = Film::with('genres', 'comments.user')->whereSlug($slug)->first();
+        $film = Film::with('genres', 'comments.user', 'country')->whereSlug($slug)->first();
         return response()->json(['film' => $film]);
     }
 
