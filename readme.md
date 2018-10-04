@@ -1,65 +1,64 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+## Requirements
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This is a test assignment which covers RESTful API, DB, auth and form functionality in Laravel. Also you have good possibility to show your skills in JavaScript!
 
-## About Laravel
+We need to create simple web application for films. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+1) BACKEND
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1.1) Implement RESTful API to manage films
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+Films should have fields:
 
-## Learning Laravel
+Name
+Description
+Realease Date
+Rating
+Ticket Price
+Country
+Genre
+Photo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+1.2) All fields are required, rating is on scale from 1 to 5, 1 film can have several genres.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-## Laravel Sponsors
+2) FRONTEND 
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+2.1) create frontend page /films/ to show all films through API. 1 film per 1 page. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
+2.2) add redirect from / to /films/
 
-## Contributing
+2.3) implement frontend page /films/film-slug-name to show specific film. URL should have film's slug.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.4) implement frontend page /films/create with form to create new film. 
 
-## Security Vulnerabilities
+2.5) add registration and authentication
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2.6) add possibility to post comments for each films. Fields "Name" and "Comment" are required. 
 
-## License
+2.7) only registered users can post comments
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+3) RESULT
+
+3.1) A new git repository should be created for the project and all changes should be committed progressively. We should be able to easily see the parts you coded and differentiate it from framework code. 
+Please use Github or Bitbucket private repository to deploy your code, provide a read permission to our account ( username is gitesoftcom for both platforms) and add the repository url to your reply. 
+
+3.2) in comment to that task provide summary of your work in English. Please, write it in formal way as if you're talking with client
+
+3.3) stop timer when you finish your work
+
+
+NOTES:
+
+- Create DB seeder with 3 films and 1 comment for every film
+
+
+## Instructions
+
+1. Install the project on Web Server
+2. Execute `composer install`
+3. Execute `cp .env.example .env`
+4. Modify .env file with Database Connection and add Project's public URL as `API_URL` in env variable
+5. Execute `php artisan migrate --seed`
+6. Execute `npm run dev` or `npm run production`
