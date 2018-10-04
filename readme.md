@@ -63,3 +63,13 @@ NOTES:
 5. Execute `php artisan migrate --seed`
 6. Execute `npm install` or `yarn install
 7. Execute `npm run dev` or `npm run production`
+
+## Summary
+
+- Created new Laravel project and used Laravel Passport for the API Authentication
+- Used `eloquent-sluggable` plugin for creating slugs based on Film name
+- Added Migrations and Seeders for test entries
+- Created Single Page Application in Vue.js for the frontend integration by using the Laravel API Endpoints
+- Implemented Vue Components in order to decouple the vue element for the pages 
+- Used Vue-router, axios, vue-auth, vuex in order to create the frontend application 
+- Used MultiSelect, Datepicker, Vue Bootstrap plugins for a better look and feel
