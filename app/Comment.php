@@ -6,13 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    protected $fillable = [
+        'film_id', 'user_id', 'comment'
+    ];
+
     public function film()
     {
-        $this->belongsTo(Film::class);
+        return $this->belongsTo(Film::class);
     }
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }
