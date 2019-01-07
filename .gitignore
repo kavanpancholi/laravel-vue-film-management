@@ -10,6 +10,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+package-lock.json
+yarn.lock
 .env
 .phpunit.result.cache
 /public/css/app.css

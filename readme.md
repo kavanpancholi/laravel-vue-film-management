@@ -47,9 +47,10 @@ We need to create simple web application for films.
 2. Execute `composer install`
 3. Execute `cp .env.example .env`
 4. Modify .env file with Database Connection and add Project's public URL as `API_URL` in env variable
-5. Execute `php artisan migrate --seed`
-6. Execute `npm install` or `yarn install
-7. Execute `npm run dev` or `npm run production`
+5. Execute `php artisan passport:install`
+6. Execute `php artisan migrate --seed`
+7. Execute `npm install` or `yarn install
+8. Execute `npm run dev` or `npm run production`
 
 ## Workflow
 
